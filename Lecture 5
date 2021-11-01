@@ -1,0 +1,88 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	//Biography
+
+	cout << "Please enter your first name: " << endl;
+	string name;
+	cin >> name;
+
+	cout << "Now enter your hometown: " << endl;
+	string hometown;
+	cin >> hometown;
+
+	cout << "Finally, enter your age: " << endl;
+	int age;
+	cin >> age;
+
+	cout << endl << endl;
+
+
+	//Temperature
+
+	cout << "Enter the temperature in Fahrenheit: " << endl;
+	double tempf;
+	cin >> tempf;
+
+	cout << tempf << " in Celsius is " << (tempf - 32) * 5 / 9 << endl << endl;
+
+	//Temperature 2
+
+	cout << "Enter the temperature in Celsius: " << endl;
+	double tempc;
+	cin >> tempc;
+
+	cout << tempc << " in Fahrenheit is " << (tempc * 5 / 9) + 32 << endl << endl;
+
+	//Circles
+
+	cout << "Please enter a radius of your choice: " << endl;
+	double radius;
+	cin >> radius;
+
+	cout << "You entered " << radius << " as the radius. " << " So that means that the Circumference of the cirlce is ";
+	cout << 3.142 * radius * radius << " and the Area is " << 2 * 3.142 * radius << "." << endl << endl;
+
+	//Square, Rectangle & Triangle
+
+	//Square
+	cout << "Please enter your measurements for the square you've just measured:-" << endl;
+	double squarel, squarew;
+	cout << "Length: "; cin >> squarel; cout << endl;
+	cout << "Width: "; cin >> squarew; cout << endl;
+
+	cout << "The area of the square is: " << squarel * squarew << "." << endl;
+
+	//Rectangle
+
+	cout << "Please enter your measurements for the rectangle you've just measured:-" << endl;
+	double recl, recw;
+	cout << "Length: "; cin >> recl; cout << endl;
+	cout << "Width: "; cin >> recw; cout << endl;
+
+	cout << "The area of the rectangle is: " << recl * recw << "." << endl;
+
+	//Triangle
+
+	cout << "Please enter your measurements for the triangle you've just measured:-" << endl;
+	double trib, trih;
+	cout << "Base: "; cin >> trib; cout << endl;
+	cout << "Height: "; cin >> trih; cout << endl;
+
+	cout << "The area of the triangle is: " << 0.5 * trib * trih << "." << endl;
+	
+
+
+
+
+
+
+
+
+
+
+
+	return 0;
+	cin.get();
+}
