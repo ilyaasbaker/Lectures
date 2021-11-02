@@ -1,0 +1,126 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    cout << "Please enter your full name: " << endl;
+    string name;
+    getline(cin, name);
+
+    cout << "How old are you?" << endl;
+    int age;
+    cin >> age;
+
+    //Mall
+    if (age >= 16 && age <= 18) {
+
+        char mall;
+        do {
+            cout << "Would you like to go Mall?(Y/N)" << endl;
+            cin >> mall;
+        } while ((mall != 'Y') && (mall != 'y') && (mall != 'N') && (mall != 'n'));
+
+
+
+        switch (mall) {
+
+        case 'Y':
+        case 'y':
+
+            cout << "Enjoy" << endl;
+            break;
+
+        case 'N':
+        case 'n':
+
+            cout << "Cancelled" << endl;
+            break;
+        }
+
+
+    }
+
+    //Theme Park
+
+    if (age >= 19 && age <= 21) {
+
+        char park;
+        do {
+            cout << "Would you like to go the Theme Park?(Y/N)" << endl;
+            cin >> park;
+        } while ((park != 'Y') && (park != 'y') && (park != 'N') && (park != 'n'));
+
+        switch (park) {
+
+        case 'Y':
+        case 'y':
+
+            cout << "Enjoy" << endl;
+            break;
+
+        case 'N':
+        case 'n':
+
+            cout << "Cancelled" << endl;
+            break;
+        }
+    }
+
+    //Istanbul
+
+    if (age >= 20 && age <= 25) {
+
+        char istanbul;
+        do {
+            cout << "Would you like to go on a trip to Istanbul?(Y/N)" << endl;
+            cin >> istanbul;
+        } while ((istanbul != 'Y') && (istanbul != 'y') && (istanbul != 'N') && (istanbul != 'n'));
+
+        switch (istanbul) {
+
+        case 'Y':
+        case 'y':
+
+            cout << "Enjoy" << endl;
+            break;
+
+        case 'N':
+        case 'n':
+
+            cout << "Cancelled" << endl;
+            break;
+        }
+    }
+
+    //Hawaii
+
+    if (age >= 26 && age <= 30) {
+
+        char hawaii;
+        do {
+            cout << "Would you like to go on a trip to Hawaii?(Y/N)" << endl;
+            cin >> hawaii;
+        } while ((hawaii != 'Y') && (hawaii != 'y') && (hawaii != 'N') && (hawaii != 'n'));
+
+        switch (hawaii) {
+
+        case 'Y':
+        case 'y':
+
+            cout << "Enjoy" << endl;
+            break;
+
+        case 'N':
+        case 'n':
+
+            cout << "Cancelled" << endl;
+            break;
+        }
+    }
+
+
+
+
+    return 0;
+    cin.get();
+}
