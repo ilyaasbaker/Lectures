@@ -1,1 +1,175 @@
+#include <iostream>
+using namespace std;
+int main()
+{ 
+    //It's my Birthday
+
+    bool myBirthday = true; // because the if statement is set to true the code will run and add one to the int making it 18
+    int age = 18;           // if it was false it would still run but print that it isnt your birthday
+    if (myBirthday == true) {
+        age++;
+        cout << "It is my birthday. I am " <<
+            age << " years old" << endl << endl;
+    }
+    else {
+        cout << "It is not my birthday" << endl << endl;
+           
+    }
+
+
+    //Good Morning
+    
+     
+        int currentTime = 3; //declare and initialise variable for time
+
+            if (currentTime >= 12) { //check if 'currentTime' is  greater than 12
+               
+                cout << "It's PM" << endl << endl; //output PM message
+            }
+            else if (currentTime < 12) { //else 'currentTime' must be less than 12
+                cout << "It's AM" << endl << endl; //output AM message
+            }
+      
+
+            //Good Morning extended
+
+            cout << "what time is it? (use the 24 hour format i.e 12:00 is 12 & 01:00pm is 13)" << endl;
+            int time;
+            cin >> time;
+
+            if (time <= 12) { 
+
+                cout << "Good Morning" << endl << endl;
+            }
+            else if (time >= 12 && time < 18) { 
+
+                cout << "Good Afternoon" << endl << endl;
+            }
+
+            else if (time >= 18 && time < 21) {
+
+                cout << "Good Evening" << endl << endl;
+            }
+            else if (time >= 21 && time < 24) {
+
+                cout << "Good Night" << endl << endl;
+            }
+            else  {
+
+                cout << "Invalid time entered" << endl << endl;
+                
+            }
+
+            //Can I vote?
+
+            int vage;
+            cout << "How old are you?\n" << endl;
+            cin >> vage;
+
+            if (vage >= 16) {
+                cout << "You're Eligible to Vote! Go and make a difference!!\n" << endl;
+            }
+            else
+            {
+                cout << "You're too young to make such big decisions, your day will come soon!\n" << endl;
+            }
+
+            //Odd or Even
+
+            cout << "Enter any numerical value of your choice: " << endl << endl;
+            int number;
+            cin >> number;
+
+            if ((number % 2 == 0)) {
+            
+                cout << "Even" << endl << endl;
+            }
+            else {
+
+                cout << "Odd" << endl << endl;
+            }
+
+            //Number Checker
+
+            cout << "Enter any Integer: " << endl;
+            int iNum;
+            cin >> iNum;
+
+            if (iNum < 0) {
+
+                cout << "Negative" << endl << endl;
+            }
+            else if (iNum >= 1) {
+
+                cout << "Positive" << endl << endl;
+            }
+            else if (iNum == 0) {
+
+                cout << "Zero" << endl << endl;
+            }
+            else {
+
+                cout << "Incorrect entry." << endl << endl;
+            }
+
+            //Profit or Loss
+            int cost;
+            cout << "How much did you pay?\n";
+            cin >> cost;
+
+            int price;
+            cout << "What was the price?\n";
+            cin >> price;
+
+            if (cost > price) {
+                cout << "Profit!\n";
+            }
+            else if (price > cost) {
+                cout << "Loss...\n";
+            }
+
+
+           //Name that shape
+            int sides;
+            cout << "How many sides does it have: ";
+            cin >> sides;
+
+            switch (sides) {
+            case 3:
+                cout << "Looks like you've found a Triangle!";
+                break;
+            case 4:
+                cout << "You've found a Quadrilateral!";
+                break;
+            case 5:
+                cout << "Oh wow, a Pentagon!";
+                break;
+            case 6:
+                cout << "That would make it a Hexagon.";
+                break;
+            case 7:
+                cout << "A Heptagon!";
+                break;
+            case 8:
+                cout << "Oct means 8 so thats an Octagon";
+                break;
+            case 9:
+                cout << "9 for Nonogan!";
+                break;
+            case 10:
+                cout << "Amazing, a Decagon!";
+                break;
+            default:
+                cout << "Error 404: Shape Not found.";
+                break;
+
+            }
+
+
+
+
+
+    return 0;
+    cin.get();
+}
 
