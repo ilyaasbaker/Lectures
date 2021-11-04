@@ -1,1 +1,121 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	//Days of the month
 
+    cout << "Please enter a month by entering it's number (i.e January = 1): " << endl;
+    int month;
+    cin >> month;
+
+    switch (month) {
+
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+        cout << "This Month has 31 Days in it" << endl << endl;
+        break;
+
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+        cout << "This Month has 30 Days in it" << endl << endl;
+        break;
+
+    case 2:
+        cout << "This Month has 28 Days unless it is a leap year then it'll have 29 Days" << endl << endl;
+        break;
+
+    default:
+        cout << "Invalid Entry" << endl << endl;
+        break;
+
+    }
+
+    //Fuel me up
+
+    cout << "Please select what type of fuel you need, Press 'D' for Diesel and 'P' for Petrol." << endl;
+    char fuel;
+    cin >> fuel;
+
+    switch (fuel) {
+
+    case 'P':
+    case 'p':
+    {
+        cout << "How many litres do you need?" << endl;
+        int petrol;
+        cin >> petrol;
+
+        int petrolCost = 32* petrol;
+        cout << "The cost for " << petrol << " litres of petrol is: " << petrolCost << "AED." << endl << endl;
+
+        break;
+    }
+
+    case 'D':
+    case 'd':
+    {
+        cout << "How many litres do you need?" << endl;
+        int diesel;
+        cin >> diesel;
+
+        int dieselCost = 3 * diesel;
+        cout << "The cost for " << diesel << " litres of petrol is: " << dieselCost << "AED." << endl << endl;
+
+        break;
+    }
+    default:
+    {
+        cout << "incorrect entry" << endl << endl;
+
+        break;
+    }
+    }
+
+    //Switching temperature
+
+    cout << "Enter the temperature: " << endl;
+    int temp;
+    cin >> temp;
+
+    cout << "Press F for Fahrenheit and C for Celsius" << endl;
+    char measurement;
+    cin >> measurement;
+
+    switch (measurement) {
+
+    case 'C':
+    case 'c':
+    {
+        cout << temp << " degrees Celsius is " << (temp * 9 / 5) + 32 << " in Fahrenheit." << endl << endl;
+
+        break;
+    }
+    case 'F':
+    case 'f':
+    {
+        cout << temp << " degrees Fahrenheit is " << (temp - 32) * 5/9 << " in Celsius." << endl << endl;
+
+        break;
+    }
+    default:
+        cout << "Invalid" << endl << endl;
+        break;
+    }
+
+    
+
+    
+
+
+
+
+	return 0;
+	cin.get();
+}
