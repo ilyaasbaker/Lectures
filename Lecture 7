@@ -1,1 +1,198 @@
+#include <iostream>
+#include <string>
 
+using namespace std;
+int main()
+{
+   //Theme Park
+
+	cout << "Enter your height in meters: " << endl;
+	double height;
+	cin >> height; cout << endl;
+
+	cout << "Enter your age: " << endl;
+	int age;
+	cin >> age;  cout << endl;
+
+	if (height > 0.6 && age > 5) {
+
+		cout << "You're eligible to ride the rollercoaster." << endl << endl;
+	}
+	else if (height < 0.6 && age < 5) {
+
+		cout << "You're not eligible to ride the rollercoaster." << endl << endl;
+	}
+	else {
+
+		cout << "incorrect entry" << endl << endl;
+	}
+
+	//Primitve quiz
+
+	cout << "What is the capital of France?" << endl;
+	string answer;
+	cin >> answer; cout << endl;
+
+	
+	
+
+	if ((answer == "paris") || (answer == "Paris")){
+
+		cout << "That's Correct!" << endl  << endl;
+	}
+	else if ((answer != "paris") || (answer != "Paris")){
+
+		cout << "Incorrect" << endl << endl;
+	}
+	else {
+
+		cout << "Invalid entry" << endl << endl;
+	}
+	
+	//Letter Checker
+
+	cout << "Enter a letter: " << endl;
+	char letter;
+	cin >> letter;
+
+	if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u' || letter == 'A' || letter == 'E' || letter == 'I' || letter == 'O' || letter == 'U') {
+
+		cout << "You've entered a Vowel" << endl << endl;
+	}
+	else {
+		cout << "You've entered a Consonant" << endl << endl;
+	}
+
+	//Grades
+
+	cout << "Enter the students grade: " << endl;
+	float grade;
+	cin >> grade;
+
+	if (grade > 70) {
+
+		cout << "A" << endl << endl;
+	}
+	else if ((grade >= 60) && (grade <= 69)) {
+
+		cout << "B" << endl << endl;
+	}
+	else if ((grade >= 50) && (grade <= 59)) {
+
+		cout << "C" << endl << endl;
+	}
+	else if ((grade >= 40) && (grade <= 49)) {
+
+		cout << "D" << endl << endl;
+	}
+	else if (grade < 40) {
+
+		cout << "F" << endl << endl;
+	}
+	else {
+
+		cout << "Invalid" << endl << endl;
+	}
+	
+	//Starting a band
+
+	bool musicalFriend = true;
+	string friendPlays = "guitar";
+
+	if (musicalFriend == true) {
+
+		cout << "What Instrument do they play?" << endl;
+		string theyPlay;
+		cin >> theyPlay;
+
+		if (theyPlay.compare(friendPlays) == 0) {
+
+			cout << "They can join!" << endl << endl;
+		}
+		else {
+
+			cout << "You need to find someone else" << endl << endl;
+		}
+	}
+	else {
+
+		cout << "You need to find someone else" << endl << endl;
+	}
+
+	//Killing time
+
+	int time;
+	cout << "How Long will your friend be: "; cin >> time;
+	double money;
+	cout << "How much money do you have: "; cin >> money;
+
+
+	if (time >= 15) {
+
+		if (money >= 5) {
+
+			cout << "Go get some coffee and wait.\n";
+		}
+		else
+		{
+			cout << "Go take a walk.\n";
+		}
+	}
+	else if (time < 15) {
+
+		cout << "Wait for your friend in the food court\n";
+	}
+
+
+	//Earthquake
+
+	float magnitude;
+	cout << "Enter the Magnitude: "; cin >> magnitude; cout << "\n";
+
+
+	if (magnitude < 2.0) {
+
+		cout << "Micro, nothing to worry about.\n";
+	}
+	else if (magnitude == 2.0 || magnitude < 3.0) {
+
+		cout << "Very minor.\n";
+	}
+	else if (magnitude == 3.0 || magnitude < 4.0) {
+
+		cout << "Minor.\n";
+	}
+	else if (magnitude == 4.0 || magnitude < 5.0) {
+
+		cout << "Light.\n";
+	}
+	else if (magnitude == 5.0 || magnitude < 6.0) {
+
+		cout << "Moderate.\n";
+	}
+	else if (magnitude == 6.0 || magnitude < 7.0) {
+
+		cout << "Strong, hide under a doorframe.\n";
+	}
+	else if (magnitude == 7.0 || magnitude < 8.0) {
+
+		cout << "Major.\n";
+	}
+	else if (magnitude == 8.0 || magnitude < 9.0) {
+
+		cout << "Great. (thats not sarcasm, you should really try and get somewhere safe)\n";
+	}
+	else if (magnitude > 10) {
+
+		cout << "Meteoric, just pray.\n";
+	}
+
+
+
+
+
+
+
+	return 0;
+	cin.get();
+}
