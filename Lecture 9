@@ -1,1 +1,90 @@
+#include <iostream>
+using namespace std;
+int main()
+{
 
+    //Brute-force attack
+
+    cout << "Enter the three digit passcode: " << endl;
+    int passcode;
+    cin >> passcode;
+
+    while (passcode != 246) {
+
+        cout << "incorrect, enter the passcode again: " << endl;
+        cin >> passcode;
+
+        if (passcode == 246) {
+            break;
+        }
+
+        passcode++;
+    }
+    cout << "Correct Password" << endl << endl;
+
+
+    //Brute-force attack 2
+
+    cout << "Enter the three digit passcode: " << endl;
+    int passcode2;
+    cin >> passcode2;
+
+    while (passcode2 != 246) {
+
+        int attempts = 5;
+        while (attempts) {
+
+            cout << "incorrect, you have " << attempts << " attempts left." << endl;
+            attempts--;
+            cin >> passcode2;
+
+            if (attempts == 0) {
+                cout << "No more attempts left, you've been locked out." << endl << endl;
+                break;
+            }
+            else if (passcode2 == 246) {
+
+                cout << "Correct Password" << endl << endl;
+                break;
+            }
+        } break;
+
+        /* if (passcode2 == 246) {
+            cout << "Correct Password" << endl << endl;
+            break;
+        }*/
+
+        
+    }
+   
+    //Input Improvement
+
+    char input;
+    do {
+        cout << "Would you like to Quit (Y/N)?" <<
+            endl;
+        cin >> input;
+    } while ((input != 'Y') && (input != 'y')); //added lower case y
+
+
+    //Loopy
+
+    int userNum = 0;
+    int counter;
+
+    cout << "Enter a number: "; cin >> counter; cout << endl;
+
+    do {
+
+        cout << userNum << endl;
+        userNum++;
+
+    } while (userNum <= counter);
+
+
+
+
+
+    return 0;
+    cin.get();
+}
