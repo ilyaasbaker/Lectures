@@ -1,1 +1,211 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	//odd or even
 
+	for (int num = 20; num <= 24; num++) {
+
+		cout << num << endl;
+
+		if (num % 2 == 0) {
+
+			cout << "Even" << endl;
+		}
+		else {
+
+			cout << "odd" << endl;
+		}
+
+		cout << endl;
+	}
+
+	//Seven Stars Seven Lines
+
+	for (int stars = 7; stars <= 7; stars++) {
+
+		for (int lines = 0; lines <= stars; lines++) {
+
+			cout << "*******" << endl;
+
+		}
+
+		cout << endl;
+	}
+
+	//Some Counting
+	//0 to 50
+
+	for (int count1 = 0; count1 <= 50; count1++) {
+
+		for (int count12 = count1; count12 <= count1; count12++) {
+
+			cout << count1 << endl;
+		}
+
+		cout << endl;
+	}
+
+	//50 to 0
+
+	for (int count2 = 50; count2 >= 0; count2--) {
+
+		for (int count22 = count2; count22 >= count2; count22--) {
+
+			cout << count2 << endl;
+		}
+
+		cout << endl;
+	}
+
+	//30 to 50 
+
+	for (int count3 = 30; count3 <= 50; count3++) {
+
+		for (int count32 = count3; count32 <= count3; count32++) {
+
+			cout << count3 << endl;
+		}
+
+		cout << endl;
+	}
+
+	//50 to 10
+
+	for (int count4 = 50; count4 >= 10; count4-=2) {
+
+		for (int count42 = count4; count42 >= count4; count42-=2) {
+
+			cout << count4 << endl;
+		}
+
+		cout << endl;
+	}
+
+	//100 t0 200
+
+	for (int count5 = 100; count5 <= 200; count5 += 5) {
+
+		for (int count52 = count5; count52 <= count5; count52 += 5) {
+
+			cout << count5 << endl;
+		}
+
+		cout << endl;
+	}
+
+	//Iterate through a word
+
+	string name = "Ilyaas";
+	
+	for (int letter = 0; letter < 6; letter++) {
+
+		cout << name.at(letter);
+
+		cout << endl;
+    }
+
+	//Descending stars 
+
+	for (int stars7 = 0; stars7 < 7; stars7++) {
+
+		for (int stars72 = 0; stars72 < 7; stars72++) {
+
+			cout << "*";
+		}
+		cout << endl;
+	}
+	
+	
+	//Find the 9's
+
+	int unum = 0;
+
+	for (int num = 100; num < 200; num++) {
+
+		if (num % 9 == 0) {
+
+			cout << "The number is: " << num << endl;
+
+			unum = unum + num;
+		}
+
+		
+	}
+	cout << "total: " << unum << endl;
+
+	//Descending Stars - 7 lines
+
+	for (int destars = 1; destars <= 7; destars++) {
+
+		for (int destars2 = destars; destars2 <= 7; destars2++) {
+
+			cout << "*";
+		}
+		cout << endl;
+	}
+
+	//Rising Stars - 5 Lines
+
+	for (int instars = 1; instars <= 5; instars++) {
+
+		for (int instars2 = 1; instars2 <= instars; instars2++) {
+
+			cout << "*";
+		}
+		cout << endl;
+	}
+
+
+	//Increase - Decrease
+
+	for (int fall = 1; fall <= 3; fall++) {
+
+		for (int fall2 = 1; fall2 <= fall; fall2++) {
+
+			cout << "*";
+		}
+		cout << endl;
+	}
+
+	for (int rises = 1; rises <= 4; rises++) {
+
+		for (int rises2 = rises; rises2 <= 4; rises2++) {
+
+			cout << "*";
+		}
+		cout << endl;
+	}
+	
+
+	//Cubes
+
+	/*for (int cubed = 0; cubed <= 100; cubed++) {
+
+		cout << "Enter an Integer: "; int userNum; cin >> userNum; cout << endl;
+
+		cubed = userNum * userNum;
+
+		cout << cubed << endl;
+		
+	}*/
+	 
+	int userNum;
+	cout << "Enter a number: ";
+	cin >> userNum;
+	cout << endl;
+
+	for (int cubed = 1; cubed <= userNum; cubed++) {
+
+		cout << "user num = " << cubed << ". cube = ";
+		int cube = cubed;
+		cube = cube * cube * cube;
+		cout << cube << endl;
+
+	
+	}
+
+
+	return 0;
+	cin.get();
+}
