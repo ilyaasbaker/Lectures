@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+   //Array Intialisation
+
+	int ages[5];
+
+	ages[0] = 19;
+	ages[1] = 23;
+	ages[2] = 22;
+	ages[3] = 30; 
+	ages[4] = 18;
+
+	int array[5] = { 19, 23, 22, 30, 18 };
+
+
+	//Months 
+
+	string months[12] = { "Jan", "Feb", "Mar", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec" };
+
+	for (int m = 0; m < 12; m++) {
+
+		cout << months[m] << endl << endl;
+	}
+
+	//Accessing array values
+
+	int heartRates[8] = { 54, 60, 71, 59, 62, 63, 60, 58 };
+
+	cout << heartRates[3] << endl;
+	cout << heartRates[6] << endl;
+
+	//to print all the values in an array use a for loop
+
+	for (int i = 0; i < 8; i++) {
+
+		cout << heartRates[i] << endl;
+	}
+
+	//Marks 
+
+	int marks[5];
+
+	for (int marks2 = 0; marks2 < 5; marks2++) {
+
+		cout << "Enter the students mark: " << endl;
+		cin >> marks[marks2];
+
+		
+	}
+	
+	cout << "These are the marks you entered: " << endl;
+
+	for (int marks3 = 0; marks3 < 5; marks3++) {
+
+		cout << marks[marks3] << endl;
+	} 
+
+	cout << "The average mark is: " << (marks[0] + marks[1] + marks[2] + marks[3] + marks[4]) / 5 << endl;
+
+		return 0;
+	cin.get();
+}
