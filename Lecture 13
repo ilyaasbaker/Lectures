@@ -1,0 +1,83 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+
+	// Auto keyword
+	string courses[] = { "BSU CC", "BSU BA", "HNC CC", "HND" };
+
+	for (auto course : courses) {
+
+		cout << course << endl;
+	}
+
+	char letters[]{ 'C', 'O', 'd', 'e', 'L', 'a', 'b' };
+
+	for (auto letter: letters) {
+
+		cout << letter;
+	}
+
+
+	//Input/Output array
+
+	int userNum[5];
+	
+	for (int num = 0; num < 5; num++) {
+
+		cout << "\nEnter a number: ";
+
+		cin >> userNum[num];
+
+		while (cin.fail()) {
+			cin.clear();
+			cin.ignore(1000, '\n');
+		}
+	}
+
+	for (int num = 0; num < 5; num++) {
+
+		cout << "You entered the following: " << userNum[num] << endl;
+	}
+
+
+	//Multidimensional Arrays
+
+	string snacks[3][4] = {
+
+		{"galaxy silk", "mars bar", "snickers", "bounty"},
+		{"flavoured yoghurt", "oman chips", "oreo", "lays"},
+		{"apple", "banana", "orange", "pear"}
+	};
+
+	for (int snack = 0; snack < 3; snack++) {
+		for (int snack2 = 0; snack2 < 4; snack2++) {
+		
+			cout << snacks[snack][snack2] << " ";
+
+		}
+
+		cout << endl;
+	}
+
+	//Array art
+
+	string art[1][5] = { "-----", "-0-0-", "-@@@-", "-^^^-","-VVV-" };
+
+	for (int art1 = 0; art1 < 1; art1++) {
+		for (int art2 = 0; art2 < 5; art2++) {
+
+			cout << art[art1][art2] << endl;
+		}
+
+		cout << endl;
+    }
+
+	
+
+
+
+
+	return 0;
+	cin.get();
+}
