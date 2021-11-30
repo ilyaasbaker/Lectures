@@ -1,0 +1,140 @@
+#include <iostream>
+#include <array>
+#include <algorithm>
+#include <random>
+using namespace std;
+int main()
+{
+
+    // Array library
+
+    array <string, 4> arr = { "Mars Bar", "Snickers", "Bounty", "Wispa" };
+
+    cout << arr.at(1) << endl;
+    cout << arr[1] << endl;
+
+    cout << arr.front() << endl;
+    cout << arr.back() << endl;
+
+    for (int i = 0; i < arr.size(); i++) {
+
+        cout << arr.at(i) << ", ";
+    }
+
+    cout << endl;
+
+    //Algorithm sorting
+
+    //Small to big
+    array <int, 5> numbers = { 33, 5, 7, 99, 83 };
+
+    sort(numbers.begin(), numbers.end());
+
+    for (int num : numbers) {
+
+        cout << num << " ";
+    }
+    cout << endl;
+
+    //Big to small 
+    array <int, 5> number = { 33, 5, 7, 99, 83 };
+
+    sort(number.begin(), number.end());
+    reverse(number.begin(), number.end());
+
+    for (int nums : number) {
+
+        cout << nums << " ";
+    }
+    cout << endl;
+
+    //rand(random) function
+    int randomArray[10];
+
+    for (int r = 0; r < 10; r++) {
+
+        randomArray[r] = rand() % 50;
+        cout << randomArray[r] << endl;
+    }
+
+    //Exercise 1
+
+    srand(3);
+    int onethou[1000];
+
+    for (int one = 0; one < 1000; one++) {
+
+        onethou[one] = rand() % 50;
+        cout << onethou[one] << endl;
+
+        if (onethou[one] == 6) {
+
+            
+        }
+    }
+
+    //Exercise 2 
+
+    int userNum[10];
+
+    cout << "enter 10 numbers: " << endl << endl;
+
+    for (int user = 0; user < 10; user++) {
+    
+        cout << user << "-" << " enter a number: "; cin >> userNum[user];
+    
+    }
+   
+    for (int user = 1; user < userNum[user]; user++) {
+
+        if (userNum[0] < userNum[user]) 
+
+            userNum[0] = userNum[user];
+        
+    }
+
+    cout << "largest number = " << userNum[0];
+    cout << endl;
+
+    
+    //Exercise 3
+
+    int userNum2[10];
+
+    cout << "enter 10 numbers: " << endl << endl;
+
+    for (int user2 = 0; user2 < 10; user2++) {
+
+        cout << user2 << "-" << " enter a number: "; cin >> userNum2[user2];
+
+    }
+
+    for (int user2 = 1; user2 < userNum2[user2]; user2++) {
+
+        if (userNum2[0] > userNum2[user2])
+
+            userNum2[0] = userNum2[user2];
+
+    }
+
+    cout << "smallest number = " << userNum2[0];
+    cout << endl;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    return 0;
+    cin.get();
+}
