@@ -1,0 +1,78 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+using namespace std;
+
+int main()
+{
+	cout << "Please enter your full name: " << endl;
+	string userName;
+	getline(cin, userName);
+
+	cout << "Now please enter a positive integer: " << endl;
+	int userNum;
+	cin >> userNum;
+
+	do {
+
+		cout << "enter a POSITIVE integer: " << endl;
+		cin >> userNum;
+
+	} while (userNum <= 0);
+
+	//Tables
+
+
+	cout << "TABLES OF " << userNum << ":" << endl;
+
+	for (int userNumf = 1; userNumf <= 10; userNumf++) {
+
+		cout << "The tables of the number you entered are: " << userNumf << " x " << userNum << " = " << userNum * userNumf << endl;
+	}
+
+	//Power 
+
+
+	cout << "POWERS OF " << userNum << ":" << endl;
+
+	int userNump = 1;
+	while (userNump <= 10) {
+
+		cout << "The powers of " << userNum << " from 1-10 are " << pow(userNum, userNump) << endl;
+
+		userNump++;
+
+	};
+
+	//Factorial
+
+
+	cout << "Factorials " << endl;
+	int fact = 1;
+	for (int userNumf = 1; userNumf <= userNum; userNumf++) {
+
+		fact *= userNumf;
+	}
+	cout << "Factorial of " << userNum << " = " << fact << endl;
+
+	//Exponent
+
+	int userNume = 1;
+	for (int userNume2 = 1; userNume2 <= userNume; userNume2++) {
+
+		userNume2 = userNume2 * userNum;
+
+		cout << "exponent: " << pow(userNum, userNume2) << endl;
+    }
+	
+	
+
+
+
+
+
+
+
+	cin.get();
+	return 0;
+}
