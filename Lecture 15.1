@@ -1,0 +1,145 @@
+
+
+#include <iostream>
+using namespace std;
+
+//first code
+void myCalculation(int num) {
+    num *= 2;
+    num += 8;
+
+    cout << num << endl;
+
+}
+
+//second code
+int myCalculation2(int num) {
+    num *= 2;
+    num += 8;
+
+    return num;
+
+}
+
+
+//third code
+double sumItems(double item1, double item2) {
+
+    double total = item1 + item2;
+    return total;
+}
+
+//fourth code
+string greetings(int time) {
+
+    if (time < 12) {
+
+        return "Good Morning";
+
+    }
+    else {
+
+        return "Good Afternoon";
+    }
+}
+
+//fifth code
+double sumItems(double item12, double item22) {
+
+    double total = item12 + item22;
+    return total;
+}
+
+//sixth code
+string greetings(int time) {
+
+    if (time >= 0 && time <= 11) {
+
+        return "Good Morning";
+
+    }
+    else if (time >= 12 && time <= 17){
+
+        return "Good Afternoon";
+    }
+    else if (time >= 18 && time <= 21) {
+
+        return "Good Evening";
+    }
+    else if (time >= 22 && time <= 24) {
+
+        return "Good Night";
+    }
+    else {
+
+        return "Invalid";
+    }
+}
+
+int main()
+{
+    // first code
+    int userNum2; cout << "enter a number: ";
+    cin >> userNum2;
+    myCalculation(userNum2);
+
+    //second code
+    int userNum; cout << "enter a number: ";
+    cin >> userNum2;
+    userNum = myCalculation2(userNum2);
+    cout << userNum2 << endl;
+
+
+   //third code
+    double myMoney = 40.00;
+    double shoes = 25.99;
+    double tshirt = 11.50;
+
+    if (sumItems(tshirt, shoes) <= myMoney) {
+
+        cout << "you can afford it" << endl;
+    }
+    else {
+
+        cout << "you're broke m8" << endl;
+    }
+
+    //fourth code
+    cout << "what's the time" << endl;
+    int userInput;
+    cin >> userInput;
+
+    cout << greetings(userInput) << endl;
+
+    //fifth code
+    double myMoney2 = 40.00;
+    double shoes2;
+    double tshirt2;
+
+    cout << "how much is the tshirt?" << endl;
+    cin >> tshirt2;
+
+    cout << "how much are the shoes?" << endl;
+    cin >> shoes2;
+
+    if (sumItems(tshirt2, shoes2) <= myMoney2) {
+
+        cout << "you can afford it" << endl;
+    }
+    else {
+
+        cout << "you're broke m8" << endl;
+    }
+
+    //sixth code
+     cout << "what's the time" << endl;
+    int userInput;
+    cin >> userInput;
+
+    cout << greetings(userInput) << endl;
+
+
+
+
+    return 0;
+}
