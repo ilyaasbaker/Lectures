@@ -1,0 +1,154 @@
+#include <iostream>
+#include <string>
+#include <array>
+#include <random>
+#include <algorithm>
+using namespace std;
+
+void enjoy();
+
+int main()
+{
+    string coffee[3] = { "Iced Coffee", "Milk Coffee", "Black Coffee" };
+    string tea[3] = { "Ice Tea", "Milk Tea", "Black Tea" };
+
+    cout << "Coffee" << "          " << "Price(AED)" << "         " << "Tea" << "            " << "Price(AED)" << endl;
+    cout << coffee[0] << "          " << "  3   " << "        " << tea[0] << "          " << "     3" << endl;
+    cout << coffee[1] << "          " << "  2   " << "        " << tea[1] << "          " << "    2" << endl;
+    cout << coffee[2] << "         " << "  1   " << "        " << tea[2] << "          " << "   1" << endl;
+
+
+   
+
+    string drinkCoffee = "Coffee", drinkcoffee = "coffee", drinkTea = "Tea", drinktea =  "tea";
+
+    
+    string drinkAnswer;
+    
+
+    while ((drinkAnswer != drinkCoffee) || (drinkAnswer != drinkcoffee) || (drinkAnswer != drinkTea) || (drinkAnswer != drinktea)) {
+
+        cout << "\nWould you like Coffee or Tea?" << endl;
+        cin >> drinkAnswer;
+
+        if ((drinkAnswer == drinkCoffee) || (drinkAnswer == drinkcoffee) || (drinkAnswer == drinkTea) || (drinkAnswer == drinktea)) {
+            break;
+    
+        }
+        
+   }
+
+
+    int drinktype;
+
+
+    if (drinkAnswer == drinkCoffee || drinkAnswer == drinkcoffee) {
+
+        cout << "What Coffee would you like?\n" << "Press 0 for Iced Coffee, 1 for Milk Coffee & 2 for Black Coffee" << endl;
+       
+        cin >> drinktype;
+    } 
+    else if (drinkAnswer == drinkTea || drinkAnswer == drinktea) {
+     
+        cout << "What Tea would you like?\n" << "Press 0 for Iced Tea, 1 for Milk Tea & 2 for Black Tea" << endl;
+        
+        cin >> drinktype;
+    }
+    else {
+        cout << "invalid entry" << endl;
+    }
+
+    
+    cout << "Would you like sugar, enter 'Y' for Yes or 'N' for No" << endl;
+    char sugar;
+    cin >> sugar;
+
+    switch (sugar) {
+
+    case 'Y':
+    case 'y':
+        cout << "Add sugar" << endl;
+        break;
+        
+    case 'N':
+    case 'n':
+        cout << "No sugar" << endl;
+        break;
+
+    default:
+        cout << "Invalid" << endl;
+        break;
+
+    }
+
+   
+
+
+    cout << "Enter the amount you will pay" << endl; 
+    double money;
+    cin >> money;
+
+    int iced = 3;
+    int milk = 2;
+    int black = 1;
+   
+        if ((drinktype == 0)) {
+
+            while (money < iced) {
+                cout << "you don't have enough, enter a sufficient amount" << endl;
+                cin >> money;
+                if (money >= iced) {
+
+                    cout << "your change will be " << money - iced << " AED" << endl;
+                    break;
+                }
+            }
+        }
+        else if ((drinktype == 1)) {
+
+            while (money < milk) {
+                cout << "you don't have enough, enter a sufficient amount" << endl;
+                cin >> money;
+                if (money >= milk) {
+
+                    cout << "your change will be " << money - milk << " AED" << endl;
+                    break;
+                }
+            }
+
+        }
+        else if ((drinktype == 2)) {
+
+            while (money < black) {
+                cout << "you don't have enough, enter a sufficient amount" << endl;
+                cin >> money;
+                if (money >= black) {
+
+                    cout << "your change will be " << money - black << " AED" << endl;
+                    break;
+                }
+            }
+        }
+        else {
+
+            cout << "error" << endl << endl;
+        }
+    
+   
+   
+    
+
+   
+
+
+
+    enjoy();
+
+    cin.get();
+    return 0;
+}
+
+void enjoy() {
+
+    cout << "Enjoy your drink" << endl;
+}
